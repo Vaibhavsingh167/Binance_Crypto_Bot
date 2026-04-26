@@ -3,8 +3,13 @@ from binance.client import Client
 import pandas as pd
 import sqlite3
 
-API_KEY="Ox6hOQOFVylQZ11g7hAO0hnXlY6GwolE0Nejhr49UjvLyEc2iiImhRqWonlVrnya"
-API_SECRET="jHy6hz9eSXvxQn5T4JhsQcjJWRyfGCeHqFd871Sp6ffpTt2jHFPskqOCUkCDTWH1"
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
+API_KEY=os.getenv("BINANCE_API_KEY")
+API_SECRET=os.getenv("BINANCE_API_SECRET")
 
 client = Client(API_KEY, API_SECRET)
 client.API_URL = 'https://testnet.binance.vision/api'
