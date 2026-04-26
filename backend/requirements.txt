@@ -1,0 +1,10 @@
+fastapi>=0.110
+uvicorn[standard]>=0.29
+websockets>=12.0
+python-binance>=1.0.19
+tensorflow>=2.15
+scikit-learn>=1.4
+python-dotenv>=1.0
+numpy
+pandas
+aiosqlite>=0.20
